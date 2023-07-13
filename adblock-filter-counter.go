@@ -3,11 +3,14 @@ package adblockfiltercounter
 import (
 	"fmt"
 	"os"
+	"regexp"
 	"strings"
 )
 
 func countRules(source string) int {
-	lines := strings.Split(source, "\n")
+	pattern := `\r?\n`
+	regex := regexp.MustCompile(pattern)
+	lines := regex.Split(source, -1)
 	count := 0
 
 	for _, line := range lines {
