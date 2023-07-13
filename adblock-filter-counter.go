@@ -15,6 +15,7 @@ func countRules(source string) int {
 
 	for _, line := range lines {
 		trimmedLine := strings.TrimSpace(line)
+
 		if trimmedLine != "" && !strings.HasPrefix(trimmedLine, "!") {
 			count++
 		}
