@@ -6,6 +6,19 @@ import (
 	"strings"
 )
 
+func fileExists(filename string) (bool, error) {
+	_, err := os.Stat(filename)
+
+	if err != nil {
+		if os.IsNotExist(err) {
+			return false, nil
+		}
+		return false, err
+	}
+
+	return true, nil
+}
+
 // Counts Adblock filter rules found in the provided string.
 //
 // It returns the number of filter rules.
@@ -24,19 +37,6 @@ func CountRules(source string) int {
 	}
 
 	return count
-}
-
-func fileExists(filename string) (bool, error) {
-	_, err := os.Stat(filename)
-
-	if err != nil {
-		if os.IsNotExist(err) {
-			return false, nil
-		}
-		return false, err
-	}
-
-	return true, nil
 }
 
 // Counts Adblock filter rules found in the provided file.
