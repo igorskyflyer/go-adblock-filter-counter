@@ -42,7 +42,7 @@ func fileExists(filename string) (bool, error) {
 // Counts Adblock filter rules found in the provided file.
 //
 // Iteturns the number of filter rules.
-func countFileRules(filename string) (int, error) {
+func CountFileRules(filename string) (int, error) {
 	exists, err := fileExists(filename)
 
 	if !exists {
