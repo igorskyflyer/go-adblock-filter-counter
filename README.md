@@ -11,7 +11,6 @@ Documentation: https://godocs.io/github.com/igorskyflyer/go-adblock-filter-count
 
 See the [releases](https://github.com/igorskyflyer/go-adblock-filter-counter/releases) page for a changelog.
 
-
 <br>
 
 This library requires Go 1.20 or newer; add it to your go.mod with:
@@ -20,11 +19,23 @@ This library requires Go 1.20 or newer; add it to your go.mod with:
 go get github.com/igorskyflyer/go-adblock-filter-counter@latest
 ```
 
+and import it like
+
+```go
+...
+
+import (
+	abcounter "github.com/igorskyflyer/go-adblock-filter-counter"
+)
+
+...
+```
+
 <br>
 
 ## 🤹🏼 Examples
 
-### ```CountRules(source string) int```
+### `CountRules(source string) int`
 
 ```go
 source string = `
@@ -42,7 +53,7 @@ abcounter.CountRules(source) // returns 4
 
 <br>
 
-### ```CountFileRules(filename string) (int, error)```
+### `CountFileRules(filename string) (int, error)`
 
 ```go
 filePath string = "./data/AdVoid.Core.txt"
