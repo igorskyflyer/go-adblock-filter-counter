@@ -54,4 +54,13 @@ func TestCountFileRules(t *testing.T) {
 			t.Errorf("Should have returned %d but returned %d", expected, actual)
 		}
 	})
+
+	t.Run("CountFileRules() - valid file (empty)", func(t *testing.T) {
+		const expected int = 0
+		actual, error := countFileRules(filePathEmpty)
+
+		if actual != expected || error != nil {
+			t.Errorf("Should have returned %d but returned %d", expected, actual)
+		}
+	})
 }
