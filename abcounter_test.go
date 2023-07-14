@@ -43,7 +43,7 @@ func TestCountFileRules(t *testing.T) {
 		count, error := CountFileRules("")
 
 		if count > -1 || error == nil {
-			t.Error("Should have errored with a non-valid file, error: ", error)
+			t.Error("Should have errored with a non-valid file.")
 		}
 	})
 
