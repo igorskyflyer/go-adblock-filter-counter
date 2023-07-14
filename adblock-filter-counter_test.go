@@ -6,6 +6,7 @@ import (
 
 const (
 	source string = `
+	[Adblock Plus 2.0]
 	||hello.world^
 	||hello.world^
 	||hello.world^
