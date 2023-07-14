@@ -6,6 +6,9 @@ import (
 	"strings"
 )
 
+// Counts Adblock filter rules found in the provided string.
+//
+// It returns the number of filter rules.
 func countRules(source string) int {
 	var pattern string = `\r?\n`
 	var regex *regexp.Regexp = regexp.MustCompile(pattern)
