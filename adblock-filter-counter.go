@@ -1,4 +1,4 @@
-package adblockfiltercounter
+package abcounter
 
 import (
 	"os"
