@@ -26,7 +26,7 @@ func TestCountRules(t *testing.T) {
 	t.Run("CountRules() - local string", func(t *testing.T) {
 		var count int = countRules(source)
 
-		if count != 3 {
+		if count != 4 {
 			t.Fail()
 		}
 	})
