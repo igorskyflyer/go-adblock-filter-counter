@@ -19,3 +19,32 @@ This library requires Go 1.20 or newer; add it to your go.mod with:
 ```shell
 go get github.com/igorskyflyer/go-adblock-filter-counter@latest
 ```
+
+## Examples
+
+### ```CountRules(source string) int```
+
+```go
+source string = `
+	[Adblock Plus 2.0]
+	||hello.world^
+	||hello.world^
+	||hello.world^
+	! Comment
+	||another.test^
+	`
+
+abcounter.CountRules(source) // returns 4
+
+```
+
+<br>
+
+### ```CountFileRules(filename string) (int, error)```
+
+```go
+filePath string = "./data/AdVoid.Core.txt"
+
+abcounter.CountFileRules(filePath) // returns (2495, nil)
+
+```
