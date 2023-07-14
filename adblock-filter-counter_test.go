@@ -20,7 +20,7 @@ const (
 func TestCountRules(t *testing.T) {
 	t.Run("CountRules() - empty string", func(t *testing.T) {
 		const expected int = 0
-		var actual int = countRules("")
+		var actual int = CountRules("")
 
 		if actual != expected {
 			t.Error("Should have returned a 0.")
@@ -29,7 +29,7 @@ func TestCountRules(t *testing.T) {
 
 	t.Run("CountRules() - local string", func(t *testing.T) {
 		const expected int = 4
-		var actual int = countRules(source)
+		var actual int = CountRules(source)
 
 		if actual != expected {
 			t.Error("Should have returned 4.")
