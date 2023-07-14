@@ -9,6 +9,8 @@ const (
 	||hello.world^
 	||hello.world^
 	||hello.world^
+	! Comment
+	||another.test^
 	`
 )
 
