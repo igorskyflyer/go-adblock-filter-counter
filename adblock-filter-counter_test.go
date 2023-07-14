@@ -13,7 +13,8 @@ const (
 	||another.test^
 	`
 
-	filePath string = "./data/AdVoid.Core.txt"
+	filePathAdVoid string = "./data/AdVoid.Core.txt"
+	filePathEmpty  string = "./data/empty.txt"
 )
 
 func TestCountRules(t *testing.T) {
@@ -45,9 +46,9 @@ func TestCountFileRules(t *testing.T) {
 		}
 	})
 
-	t.Run("CountFileRules() - valid file", func(t *testing.T) {
+	t.Run("CountFileRules() - valid file (non-empty)", func(t *testing.T) {
 		const expected int = 2495
-		actual, error := countFileRules(filePath)
+		actual, error := countFileRules(filePathAdVoid)
 
 		if actual != expected || error != nil {
 			t.Errorf("Should have returned %d but returned %d", expected, actual)
