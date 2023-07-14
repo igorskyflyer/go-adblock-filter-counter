@@ -20,7 +20,9 @@ This library requires Go 1.20 or newer; add it to your go.mod with:
 go get github.com/igorskyflyer/go-adblock-filter-counter@latest
 ```
 
-## Examples
+<br>
+
+## 🤹🏼 Examples
 
 ### ```CountRules(source string) int```
 
