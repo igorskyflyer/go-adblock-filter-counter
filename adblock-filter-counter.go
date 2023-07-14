@@ -1,7 +1,6 @@
 package adblockfiltercounter
 
 import (
-	"fmt"
 	"os"
 	"regexp"
 	"strings"
@@ -37,20 +36,18 @@ func fileExists(filename string) (bool, error) {
 	return true, nil
 }
 
-func countFileRules(filename string) int {
+func countFileRules(filename string) (int, error) {
 	exists, err := fileExists(filename)
 
 	if !exists {
-		fmt.Println("File not found:", err)
-		return 0
+		return -1, err
 	}
 
 	source, err := os.ReadFile(filename)
 
 	if err != nil {
-		fmt.Println("Error reading file:", err)
-		return 0
+		return -1, err
 	}
 
-	return countRules(string(source))
+	return countRules(string(source)), nil
 }
