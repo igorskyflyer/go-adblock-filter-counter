@@ -24,6 +24,10 @@ func TestCountRules(t *testing.T) {
 
 func TestCountFileRules(t *testing.T) {
 	t.Run("CountFileRules()", func(t *testing.T) {
+		count, error := countFileRules("")
 
+		if count > -1 || error != nil {
+			t.Fail()
+		}
 	})
 }
