@@ -13,13 +13,17 @@ const (
 )
 
 func TestCountRules(t *testing.T) {
-	t.Run("Test1", func(t *testing.T) {
+	t.Run("CountRules()", func(t *testing.T) {
 		var count int = countRules(source)
 
 		if count != 3 {
 			t.Fail()
 		}
 	})
+}
 
-	// Additional tests...
+func TestCountFileRules(t *testing.T) {
+	t.Run("CountFileRules()", func(t *testing.T) {
+
+	})
 }
