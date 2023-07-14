@@ -9,14 +9,11 @@ import (
 func fileExists(filename string) (bool, error) {
 	_, err := os.Stat(filename)
 
-	if err != nil {
-		if os.IsNotExist(err) {
-			return false, nil
-		}
+	if os.IsNotExist(err) {
 		return false, err
+	} else {
+		return true, err
 	}
-
-	return true, nil
 }
 
 // Counts Adblock filter rules found in the provided string.
