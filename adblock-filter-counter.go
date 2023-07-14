@@ -41,7 +41,7 @@ func CountRules(source string) int {
 
 // Counts Adblock filter rules found in the provided file.
 //
-// It returns the number of filter rules.
+// It returns the number of filter rules or -1 in case of an error.
 func CountFileRules(filename string) (int, error) {
 	exists, err := fileExists(filename)
 
