@@ -39,7 +39,7 @@ func TestCountRules(t *testing.T) {
 
 func TestCountFileRules(t *testing.T) {
 	t.Run("CountFileRules() - non-valid file", func(t *testing.T) {
-		count, error := countFileRules("")
+		count, error := CountFileRules("")
 
 		if count > -1 || error != nil {
 			t.Error("Should have errored with a non-valid file, error: ", error)
@@ -48,7 +48,7 @@ func TestCountFileRules(t *testing.T) {
 
 	t.Run("CountFileRules() - valid file (non-empty)", func(t *testing.T) {
 		const expected int = 2495
-		actual, error := countFileRules(filePathAdVoid)
+		actual, error := CountFileRules(filePathAdVoid)
 
 		if actual != expected || error != nil {
 			t.Errorf("Should have returned %d but returned %d", expected, actual)
@@ -57,7 +57,7 @@ func TestCountFileRules(t *testing.T) {
 
 	t.Run("CountFileRules() - valid file (empty)", func(t *testing.T) {
 		const expected int = 0
-		actual, error := countFileRules(filePathEmpty)
+		actual, error := CountFileRules(filePathEmpty)
 
 		if actual != expected || error != nil {
 			t.Errorf("Should have returned %d but returned %d", expected, actual)
