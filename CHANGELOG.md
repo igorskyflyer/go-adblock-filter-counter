@@ -4,6 +4,15 @@
 
 <br>
 
+## 1.0.1 - 15-Jul-2023
+
+- dev: update documentation
+
+<br>
+<br>
+
+<br>
+
 ## 1.0.0 - 14-Jul-2023
 
 - initial release 🎉
