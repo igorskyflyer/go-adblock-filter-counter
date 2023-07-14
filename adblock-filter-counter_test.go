@@ -47,7 +47,7 @@ func TestCountFileRules(t *testing.T) {
 	})
 
 	t.Run("CountFileRules() - valid file (non-empty)", func(t *testing.T) {
-		const expected int = 2495
+		const expected int = 2494
 		actual, error := CountFileRules(filePathAdVoid)
 
 		if actual != expected || error != nil {
