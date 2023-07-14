@@ -13,7 +13,15 @@ const (
 )
 
 func TestCountRules(t *testing.T) {
-	t.Run("CountRules()", func(t *testing.T) {
+	t.Run("CountRules() - empty string", func(t *testing.T) {
+		var count int = countRules("")
+
+		if count != 0 {
+			t.Fail()
+		}
+	})
+
+	t.Run("CountRules() - local string", func(t *testing.T) {
 		var count int = countRules(source)
 
 		if count != 3 {
