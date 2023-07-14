@@ -16,18 +16,20 @@ const (
 
 func TestCountRules(t *testing.T) {
 	t.Run("CountRules() - empty string", func(t *testing.T) {
-		var count int = countRules("")
+		const expected int = 0
+		var actual int = countRules("")
 
-		if count != 0 {
-			t.Fail()
+		if actual != expected {
+			t.Error("Should have returned a 0.")
 		}
 	})
 
 	t.Run("CountRules() - local string", func(t *testing.T) {
-		var count int = countRules(source)
+		const expected int = 4
+		var actual int = countRules(source)
 
-		if count != 4 {
-			t.Fail()
+		if actual != expected {
+			t.Error("Should have returned 4.")
 		}
 	})
 }
