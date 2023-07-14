@@ -1,3 +1,3 @@
-module github.com/igorskyflyer/adblock-filter-counter
+module github.com/igorskyflyer/go-adblock-filter-counter
 
 go 1.20
